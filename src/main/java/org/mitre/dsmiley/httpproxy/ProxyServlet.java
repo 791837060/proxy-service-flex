@@ -441,8 +441,8 @@ public class ProxyServlet extends HttpServlet {
     System.out.println(curl);
     System.out.println();
     System.out.println("_________________end________________________end________________________end________________________end________________________end_______ ");
-    WritingFile.appendFile("/Users/zenghuikang/workspace/swaggerul/httpProxyer_ulwfcyvi/proxyservice/src/main/resources/request_log.txt",resultJson+"\n",true);
-    WritingFile.appendFile("/Users/zenghuikang/workspace/swaggerul/httpProxyer_ulwfcyvi/proxyservice/src/main/resources/request_log.txt","_________________end________________________end________________________end________________________end________________________end_______ \n",true);
+    WritingFile.appendFile("/Users/zenghuikang/workspace/swaggerul/proxy-service-flex/src/main/resources/request_log.txt",resultJson+"\n",true);
+    WritingFile.appendFile("/Users/zenghuikang/workspace/swaggerul/proxy-service-flex/src/main/resources/request_log.txt","_________________end________________________end________________________end________________________end________________________end_______ \n",true);
 
     // 重置游标
     in.reset();
@@ -498,7 +498,7 @@ public class ProxyServlet extends HttpServlet {
     String par = HttpServletRequestReader.ReadAsChars(requestWrapper);
 
     parJson = toPrettyFormat(par.toString());
-    WritingFile.appendFile("/Users/zenghuikang/workspace/swaggerul/httpProxyer_ulwfcyvi/proxyservice/src/main/resources/request_log.txt",parJson+"\n",true);
+    WritingFile.appendFile("/Users/zenghuikang/workspace/swaggerul/proxy-service-flex/src/main/resources/request_log.txt",parJson+"\n",true);
     InputStreamEntity inputStreamEntity = new InputStreamEntity(requestWrapper.getInputStream(), getContentLength(requestWrapper));
     eProxyRequest.setEntity(inputStreamEntity);
     return eProxyRequest;
@@ -692,7 +692,7 @@ Accept,application/json, text/plain, *\/*
     // System.out.println(proxyRequest.getRequestLine().getUri());
     System.out.println("request body:"+parJson);
     requestBody =parJson;
-    WritingFile.appendFile("/Users/zenghuikang/workspace/swaggerul/httpProxyer_ulwfcyvi/proxyservice/src/main/resources/request_log.txt",df.format(new Date()) + "  getRequestLine==>  "+proxyRequest.getRequestLine().toString()+"\n",true);
+    WritingFile.appendFile("/Users/zenghuikang/workspace/swaggerul/proxy-service-flex/src/main/resources/request_log.txt",df.format(new Date()) + "  getRequestLine==>  "+proxyRequest.getRequestLine().toString()+"\n",true);
 
 
     HttpParams params = proxyRequest.getParams();

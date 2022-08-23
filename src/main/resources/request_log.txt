@@ -1,0 +1,1224 @@
+{
+  "tokenFullName": "Dai Stablecoin",
+  "token": "DAI",
+  "network": "ETH",
+  "tokenId": "0x6b175474e89094c44da98b954eedeac495271d0f",
+  "dex": "UNIV2",
+  "poolAddress": "0xa478c2975ab1ea89e8196811f51a7b7ade33eb11",
+  "logo": "https://img0.baidu.com/it/u\u003d239433335,797856775\u0026fm\u003d253\u0026fmt\u003dauto\u0026app\u003d138\u0026f\u003dJPEG?w\u003d500\u0026h\u003d292",
+  "marketType": "Perpetual",
+  "twitter": "https://img0.baidu.com/it/u\u003d239433335,797856775\u0026fm\u003d253\u0026fmt\u003dauto\u0026app\u003d138\u0026f\u003dJPEG?w\u003d500\u0026h\u003d292",
+  "discord": "https://img0.baidu.com/it/u\u003d239433335,797856775\u0026fm\u003d253\u0026fmt\u003dauto\u0026app\u003d138\u0026f\u003dJPEG?w\u003d500\u0026h\u003d292",
+  "telegram": "https://img0.baidu.com/it/u\u003d239433335,797856775\u0026fm\u003d253\u0026fmt\u003dauto\u0026app\u003d138\u0026f\u003dJPEG?w\u003d500\u0026h\u003d292",
+  "website": "https://img0.baidu.com/it/u\u003d239433335,797856775\u0026fm\u003d253\u0026fmt\u003dauto\u0026app\u003d138\u0026f\u003dJPEG?w\u003d500\u0026h\u003d292",
+  "ammTvl": 20000
+}
+2022-08-23 06:23:36  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/markets/protected/create/listing_form HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "id": "790250841303973908",
+    "tokenFullName": "Dai Stablecoin",
+    "token": "DAI",
+    "network": "ETH",
+    "tokenId": "0x6b175474e89094c44da98b954eedeac495271d0f",
+    "dex": "UNIV2",
+    "poolAddress": "0xa478c2975ab1ea89e8196811f51a7b7ade33eb11",
+    "logo": "https://img0.baidu.com/it/u\u003d239433335,797856775\u0026fm\u003d253\u0026fmt\u003dauto\u0026app\u003d138\u0026f\u003dJPEG?w\u003d500\u0026h\u003d292",
+    "marketType": "Perpetual",
+    "twitter": "https://img0.baidu.com/it/u\u003d239433335,797856775\u0026fm\u003d253\u0026fmt\u003dauto\u0026app\u003d138\u0026f\u003dJPEG?w\u003d500\u0026h\u003d292",
+    "discord": "https://img0.baidu.com/it/u\u003d239433335,797856775\u0026fm\u003d253\u0026fmt\u003dauto\u0026app\u003d138\u0026f\u003dJPEG?w\u003d500\u0026h\u003d292",
+    "telegram": "https://img0.baidu.com/it/u\u003d239433335,797856775\u0026fm\u003d253\u0026fmt\u003dauto\u0026app\u003d138\u0026f\u003dJPEG?w\u003d500\u0026h\u003d292",
+    "website": "https://img0.baidu.com/it/u\u003d239433335,797856775\u0026fm\u003d253\u0026fmt\u003dauto\u0026app\u003d138\u0026f\u003dJPEG?w\u003d500\u0026h\u003d292",
+    "ammTvl": 20000,
+    "creator": 13672929,
+    "created": 1661235817269,
+    "updated": 1661235817269,
+    "status": "SUBMIT"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "hashToken": "CF-DAI-AMM-1367316394",
+  "ammRedeemType": "CLOSE_ALL_POSITION"
+}
+2022-08-23 06:26:42  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/redeem HTTP/1.1
+{
+  "success": false,
+  "message": "Locked, no redemption allowed",
+  "code": "65016"
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "hashToken": "CF-DAI-AMM-1367316394",
+  "ammRedeemType": "CLOSE_ALL_POSITION"
+}
+2022-08-23 06:26:45  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/redeem HTTP/1.1
+{
+  "success": false,
+  "message": "Locked, no redemption allowed",
+  "code": "65016"
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "hashToken": "CF-DAI-AMM-1367316394",
+  "ammRedeemType": "CLOSE_ALL_POSITION"
+}
+2022-08-23 06:26:46  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/redeem HTTP/1.1
+{
+  "success": false,
+  "message": "Locked, no redemption allowed",
+  "code": "65016"
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "hashToken": "CF-DAI-AMM-1367316394",
+  "ammRedeemType": "CLOSE_ALL_POSITION"
+}
+2022-08-23 06:26:47  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/redeem HTTP/1.1
+{
+  "success": false,
+  "message": "Locked, no redemption allowed",
+  "code": "65016"
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "redeemAmmParams": {
+    "hashToken": "CF-DAI-AMM-1367316394",
+    "ammRedeemType": "CLOSE_ALL_POSITION"
+  }
+}
+2022-08-23 06:30:35  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/account/protected/permissionless/amm/redeem HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "orderType": 40,
+    "count": 1,
+    "redeemAmmParams": {
+      "hashToken": "CF-DAI-AMM-1367316394",
+      "accountId": 13672929,
+      "ammRedeemType": "CLOSE_ALL_POSITION"
+    },
+    "justCheck": false
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "hashToken": "CF-DAI-AMM-1367313991",
+  "ammRedeemType": "CLOSE_ALL_POSITION"
+}
+2022-08-23 06:33:20  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/redeem HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "isSuccess": true,
+    "code": "null"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.001,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 1
+}
+2022-08-23 06:40:56  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "msg": "返回空"
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.001,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 1
+}
+2022-08-23 06:41:06  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "msg": "返回空"
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.001,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 1
+}
+2022-08-23 06:41:43  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367316460"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.001,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 1
+}
+2022-08-23 06:44:24  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367316584"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 06:59:22  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "msg": "返回空"
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:00:01  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367316693"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:17:23  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "msg": "返回空"
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:20:50  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "msg": "返回空"
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:20:53  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "msg": "返回空"
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:22:33  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367317067"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:23:10  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367317170"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:23:13  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367317218"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:23:15  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367317363"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:23:17  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367317492"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:23:18  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367317524"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:23:21  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367317640"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:23:24  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367317720"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:23:27  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": false,
+  "message": "Insufficient balance of USD",
+  "code": "Insufficient balance of USD"
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:23:29  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": false,
+  "message": "Insufficient balance of USD",
+  "code": "Insufficient balance of USD"
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:25:40  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": false,
+  "message": "Insufficient balance of USD",
+  "code": "Insufficient balance of USD"
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:25:41  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": false,
+  "message": "Insufficient balance of USD",
+  "code": "Insufficient balance of USD"
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:26:45  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367317825"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:26:48  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367317903"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:26:52  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367318052"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:26:54  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367318198"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:26:57  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367318219"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:27:00  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367318356"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:27:06  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367318494"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:27:08  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367318532"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:27:12  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367318690"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:27:15  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367318777"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:27:18  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367318882"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:27:22  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367318962"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:27:24  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367319009"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:27:28  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367319186"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:27:31  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367319297"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:27:34  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367319311"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:27:37  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367319439"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:27:41  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367319597"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:27:45  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367319618"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:27:49  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367319736"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:27:51  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367319811"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:27:55  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367319991"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:27:58  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367320078"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:28:05  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367320153"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:28:08  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367320295"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:28:12  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367320351"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:28:15  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367320470"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:28:20  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367320516"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:28:23  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367320616"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:28:27  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367320708"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:28:30  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367320806"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": "13672929",
+  "direction": "NEUTRAL",
+  "lowerBound": 0.02,
+  "market": "XIO-USD-SWAP-PER",
+  "maxLeverage": 1,
+  "qty1": 20000,
+  "qty2": 0,
+  "stakedCoin1": "USD",
+  "stakedCoin2": "",
+  "upperBound": 0.03
+}
+2022-08-23 07:28:35  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/amm/protected/amm/apply HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "tokenId": "CF-XIO-AMM-1367320940"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "redeemAmmParams": {
+    "hashToken": "CF-XIO-AMM-1367316693",
+    "ammRedeemType": "CLOSE_ALL_POSITION"
+  }
+}
+2022-08-23 07:44:28  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/account/protected/permissionless/amm/redeem HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "orderType": 40,
+    "count": 1,
+    "redeemAmmParams": {
+      "hashToken": "CF-XIO-AMM-1367316693",
+      "accountId": 13672929,
+      "ammRedeemType": "CLOSE_ALL_POSITION"
+    },
+    "justCheck": false
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
