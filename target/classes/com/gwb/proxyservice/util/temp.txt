@@ -1,0 +1,81 @@
+select * from risk_templates where template_name  like '%BTCA%';
+template_code   |template_name|account_type|margin_currency|correlation|status|created                |last_updated           |net_pos_upper_limit|net_pos_leverage|
+----------------+-------------+------------+---------------+-----------+------+-----------------------+-----------------------+-------------------+----------------+
+1b236de55ce82548|Linear-BTCA  |LINEAR      |USD            |0.000000000|      |2022-08-11 08:43:13.137|2022-08-11 08:43:13.137|        4.400000000|     1.000000000|
+1b236de55ce82548|Linear-BTCA  |LINEAR      |USD            |0.000000000|      |2022-08-11 08:43:13.137|2022-08-11 08:43:13.137|        1.100000000|     2.000000000|
+1b236de55ce82548|Linear-BTCA  |LINEAR      |USD            |0.000000000|      |2022-08-11 08:43:13.137|2022-08-11 08:43:13.137|        4.400000000|     3.000000000|
+
+select *  from market_group where code like '%BTCA%';
+code|description|account_type|margin_currency|risk_template_code|status|attributes|
+----+-----------+------------+---------------+------------------+------+----------+
+BTCA|BTCA       |LINEAR      |USD            |1b236de55ce82548  |      |          |
+
+select *  from risk_static_data_tiers where market_group like '%BTCA%';
+account_type|margin_currency|market_group|order_book_a|order_book_b|correlation|net_pos_upper_limit|net_pos_leverage|
+------------+---------------+------------+------------+------------+-----------+-------------------+----------------+
+LINEAR      |USD            |BTCA        |            |            |0.000000000|        4.400000000|     1.000000000|
+LINEAR      |USD            |BTCA        |            |            |0.000000000|        1.100000000|     2.000000000|
+LINEAR      |USD            |BTCA        |            |            |0.000000000|        4.400000000|     3.000000000|
+
+select *  from instrument where code like '%BTCA%';
+id                |code             |name                      |tenor|inst_type|base_id           |base|counter_id        |counter|collateral_type|cycle_type|delivery_date|delivery_time|order_cut_off|margin_currency|contract_val_currency|status  |active|icon|display_accuracy|created                |creator   |last_updated           |last_updator|rule_id|release_id|instrument_number|is_withdrawal|is_deposit|anchor_coin|delisting_date|is_delisting|
+------------------+-----------------+--------------------------+-----+---------+------------------+----+------------------+-------+---------------+----------+-------------+-------------+-------------+---------------+---------------------+--------+------+----+----------------+-----------------------+----------+-----------------------+------------+-------+----------+-----------------+-------------+----------+-----------+--------------+------------+
+786880899798204425|BTCA             |BTCA                      |     |COIN     |                  |    |                  |       |               |          |             |             |             |USD            |BTCA                 |INACTIVE|      |    |               8|2022-08-11 08:43:13.338|9999999999|2022-08-11 08:43:13.338|  9999999999|       |          |5137             |false        |false     |           |              |false       |
+786880899900178441|BTCA-USD-SWAP-LIN|BTCA/USD Perpetual(Linear)|     |FUTURE   |786880899798204425|BTCA|586133487795568645|USD    |LINEAR         |SWAP      |             |             |             |USD            |BTCA                 |ACTIVE  |      |    |                |2022-08-11 08:43:13.372|9999999999|2022-08-11 08:43:13.372|  9999999999|       |          |                 |true         |true      |           |              |false       |
+
+select *  from market where market_code like '%BTCA%';
+id                |market_id       |market_code      |name         |market_type|spread_type|base_id           |base_inst|counter_id        |counter_inst|collateral_type|cycle_type|margin_currency|contract_val_currency|reference_pair|market_group|linked_market
+------------------+----------------+-----------------+-------------+-----------+-----------+------------------+---------+------------------+------------+---------------+----------+---------------+---------------------+--------------+------------+-------------
+786880900120281097|5137101011000000|BTCA-USD-SWAP-LIN|BTCA/USD Perp|FUTURE     |           |786880899798204425|BTCA     |586133487795568645|USD         |LINEAR         |SWAP      |USD            |BTCA                 |BTCA/USD      |BTCA        |
+
+|risk_orderbook_a |risk_orderbook_b|tick_size  |qty_increment|pricing_source            |upper_price_type|upper_price_bound|lower_price_type|lower_price_bound|price_bound|price_bound_type|max_leverage|status|active|listing_date           |days_listing|end_date
++-----------------+----------------+-----------+-------------+--------------------------+----------------+-----------------+----------------+-----------------+-----------+----------------+------------+------+------+-----------------------+------------+--------
+|BTCA-USD-SWAP-LIN|                |4.000000000|  1.000000000|#tradeblock.get("BCH/USD")|                |                 |                |                 |5.000000000|PERCENT         |            |ACTIVE|      |2022-08-11 08:44:13.396|            |
+
+
+|ref_instrument_id |created                |creator   |last_updated           |last_updator|market_price|tag|description                |delisting_date|is_delisting|
++------------------+-----------------------+----------+-----------------------+------------+------------+---+---------------------------+--------------+------------+
+|786880899900178441|2022-08-11 08:43:13.396|9999999999|2022-08-11 08:43:13.396|  9999999999|            |   |BTCA/USD Perpetual (Linear)|              |false       |
+
+
+
+无许可将改成
+
+select * from risk_templates where template_name  like '%BTCA%';
+template_code   |template_name|account_type        |margin_currency|correlation|status|created                |last_updated           |net_pos_upper_limit|net_pos_leverage|
+----------------+-------------+------------        +---------------+-----------+------+-----------------------+-----------------------+-------------------+----------------+
+1b236de55ce82548|Linear-BTCA  |Permissionless      |USD            |0.000000000|      |2022-08-11 08:43:13.137|2022-08-11 08:43:13.137|        4.400000000|     1.000000000|
+1b236de55ce82548|Linear-BTCA  |Permissionless      |USD            |0.000000000|      |2022-08-11 08:43:13.137|2022-08-11 08:43:13.137|        1.100000000|     2.000000000|
+1b236de55ce82548|Linear-BTCA  |Permissionless      |USD            |0.000000000|      |2022-08-11 08:43:13.137|2022-08-11 08:43:13.137|        4.400000000|     3.000000000|
+
+select *  from market_group where code like '%BTCA%';
+code|description|account_type|margin_currency|risk_template_code|status|attributes|
+----+-----------+------------+---------------+------------------+------+----------+
+BTCA|BTCA       |LINEAR      |USD            |1b236de55ce82548  |      |          |
+
+select *  from risk_static_data_tiers where market_group like '%BTCA%';
+account_type        |margin_currency|market_group|order_book_a|order_book_b|correlation|net_pos_upper_limit|net_pos_leverage|
+------------        +---------------+------------+------------+------------+-----------+-------------------+----------------+
+Permissionless      |USD            |BTCA        |            |            |0.000000000|        4.400000000|     1.000000000|
+Permissionless      |USD            |BTCA        |            |            |0.000000000|        1.100000000|     2.000000000|
+Permissionless      |USD            |BTCA        |            |            |0.000000000|        4.400000000|     3.000000000|
+
+select *  from instrument where code like '%BTCA%';
+id                |code             |name                      |tenor|inst_type|base_id           |base|counter_id        |counter|collateral_type|cycle_type|delivery_date|delivery_time|order_cut_off|margin_currency|contract_val_currency|status  |active|icon|display_accuracy|created                |creator   |last_updated           |last_updator|rule_id|release_id|instrument_number|is_withdrawal|is_deposit|anchor_coin|delisting_date|is_delisting|
+------------------+-----------------+--------------------------+-----+---------+------------------+----+------------------+-------+---------------+----------+-------------+-------------+-------------+---------------+---------------------+--------+------+----+----------------+-----------------------+----------+-----------------------+------------+-------+----------+-----------------+-------------+----------+-----------+--------------+------------+
+786880899798204425|BTCA             |BTCA                      |     |COIN     |                  |    |                  |       |               |          |             |             |             |USD            |BTCA                 |INACTIVE|      |    |               8|2022-08-11 08:43:13.338|9999999999|2022-08-11 08:43:13.338|  9999999999|       |          |5137             |false        |false     |           |              |false       |
+786880899900178441|BTCA-USD-SWAP-PER|BTCA/USD Perpetual(Linear)|     |FUTURE   |786880899798204425|BTCA|586133487795568645|USD    |LINEAR         |SWAP      |             |             |             |USD            |BTCA                 |ACTIVE  |      |    |                |2022-08-11 08:43:13.372|9999999999|2022-08-11 08:43:13.372|  9999999999|       |          |                 |true         |true      |           |              |false       |
+
+select *  from market where market_code like '%BTCA%';
+id                |market_id       |market_code      |name         |market_type|spread_type|base_id           |base_inst|counter_id        |counter_inst|collateral_type|cycle_type|margin_currency|contract_val_currency|reference_pair|market_group|linked_market
+------------------+----------------+-----------------+-------------+-----------+-----------+------------------+---------+------------------+------------+---------------+----------+---------------+---------------------+--------------+------------+-------------
+786880900120281097|5137101011000000|BTCA-USD-SWAP-PER|BTCA/USD Perp|FUTURE     |           |786880899798204425|BTCA     |586133487795568645|USD         |LINEAR         |SWAP      |USD            |BTCA                 |BTCA/USD      |BTCA        |
+
+|risk_orderbook_a |risk_orderbook_b|tick_size  |qty_increment|pricing_source            |upper_price_type|upper_price_bound|lower_price_type|lower_price_bound|price_bound|price_bound_type|max_leverage|status|active|listing_date           |days_listing|end_date
++-----------------+----------------+-----------+-------------+--------------------------+----------------+-----------------+----------------+-----------------+-----------+----------------+------------+------+------+-----------------------+------------+--------
+|BTCA-USD-SWAP-PER|                |4.000000000|  1.000000000|#tradeblock.get("BCH/USD")|                |                 |                |                 |5.000000000|PERCENT         |            |ACTIVE|      |2022-08-11 08:44:13.396|            |
+
+
+|ref_instrument_id |created                |creator   |last_updated           |last_updator|market_price|tag|description                |delisting_date|is_delisting|
++------------------+-----------------------+----------+-----------------------+------------+------------+---+---------------------------+--------------+------------+
+|786880899900178441|2022-08-11 08:43:13.396|9999999999|2022-08-11 08:43:13.396|  9999999999|            |   |BTCA/USD Perpetual (Linear)|              |false       |

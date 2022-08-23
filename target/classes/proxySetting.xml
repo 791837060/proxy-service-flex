@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Proxy>
+	<defaultSettings>
+		<port>8333</port>
+		<basePath>/</basePath>
+	</defaultSettings>
+
+	<ProxyServices>
+		<!--<ProxyService>
+			<proxyUrl>/*</proxyUrl>
+			<targetUrl>https://v2ppapi.coinflex.com</targetUrl>
+		</ProxyService>-->
+
+		<ProxyService>
+			<proxyUrl>/pp/*</proxyUrl>
+			<targetUrl>https://v2ppapi.coinflex.com</targetUrl>
+		</ProxyService>
+
+		<ProxyService>
+			<proxyUrl>/stg/*</proxyUrl>
+			<targetUrl>https://v2stgapi.coinflex.com</targetUrl>
+		</ProxyService>
+
+		<ProxyService>
+			<proxyUrl>/durian/*</proxyUrl>
+			<targetUrl>https://api-durian.cfdev.pro</targetUrl>
+		</ProxyService>
+
+		<ProxyService>
+			<proxyUrl>/lemon/*</proxyUrl>
+			<targetUrl>https://api-lemon.cfdev.pro</targetUrl>
+		</ProxyService>
+
+		<ProxyService>
+			<proxyUrl>/kiwi/*</proxyUrl>
+			<targetUrl>https://api-kiwi.cfdev.pro</targetUrl>
+		</ProxyService>
+
+		<ProxyService>
+			<proxyUrl>/local_amm/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8008</targetUrl>
+		</ProxyService>
+
+		<ProxyService>
+			<proxyUrl>/local_market/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8082</targetUrl>
+		</ProxyService>
+
+		<ProxyService>
+			<proxyUrl>/local_account/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8083</targetUrl>
+		</ProxyService>
+
+		<ProxyService>
+			<proxyUrl>/local_admin/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8004</targetUrl>
+		</ProxyService>
+
+		<ProxyService>
+			<proxyUrl>/local_db_worker/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8097</targetUrl>
+		</ProxyService>
+
+		<ProxyService>
+			<proxyUrl>/local_blockchain/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8006</targetUrl>
+		</ProxyService>
+
+		<ProxyService>
+			<proxyUrl>/local_competition/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8003</targetUrl>
+		</ProxyService>
+
+		<ProxyService>
+			<proxyUrl>/local_account_value/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8096</targetUrl>
+		</ProxyService>
+		<ProxyService>
+			<proxyUrl>/local_cache/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8015</targetUrl>
+		</ProxyService>
+		<ProxyService>
+			<proxyUrl>/local_db_worker_sta/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8011</targetUrl>
+		</ProxyService>
+		<ProxyService>
+			<proxyUrl>/local_ohlc/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8086</targetUrl>
+		</ProxyService>
+		<ProxyService>
+			<proxyUrl>/local_ammbot/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8098</targetUrl>
+		</ProxyService>
+		<ProxyService>
+			<proxyUrl>/local_gateway/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8081</targetUrl>
+		</ProxyService>
+		<ProxyService>
+			<proxyUrl>/local_worker_pricing/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8094</targetUrl>
+		</ProxyService>
+		<ProxyService>
+			<proxyUrl>/local_db_worker_trade/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8093</targetUrl>
+		</ProxyService>
+		<ProxyService>
+			<proxyUrl>/local_portal/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8012</targetUrl>
+		</ProxyService>
+		<ProxyService>
+			<proxyUrl>/local_delivery/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8084</targetUrl>
+		</ProxyService>
+		<ProxyService>
+			<proxyUrl>/local_db_worker_tick2/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8092</targetUrl>
+		</ProxyService>
+		<ProxyService>
+			<proxyUrl>/local_internal_ohlc/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8009</targetUrl>
+		</ProxyService>
+		<ProxyService>
+			<proxyUrl>/local_lending/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8085</targetUrl>
+		</ProxyService>
+		<ProxyService>
+			<proxyUrl>/local_messaging/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8087</targetUrl>
+		</ProxyService>
+		<ProxyService>
+			<proxyUrl>/local_lending_bot/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8095</targetUrl>
+		</ProxyService>
+		<ProxyService>
+			<proxyUrl>/local_transfer/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8013</targetUrl>
+		</ProxyService>
+		<ProxyService>
+			<proxyUrl>/local_oauth2/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8001</targetUrl>
+		</ProxyService>
+		<ProxyService>
+			<proxyUrl>/local_pricing/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8010</targetUrl>
+		</ProxyService>
+		<ProxyService>
+			<proxyUrl>/local_orderbook/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8007</targetUrl>
+		</ProxyService>
+		<ProxyService>
+			<proxyUrl>/local_orderbot/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8099</targetUrl>
+		</ProxyService>
+		<ProxyService>
+			<proxyUrl>/local_platform/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8088</targetUrl>
+		</ProxyService>
+		<ProxyService>
+			<proxyUrl>/local_wallet/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8017</targetUrl>
+		</ProxyService>
+		<ProxyService>
+			<proxyUrl>/local_trading/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8016</targetUrl>
+		</ProxyService>
+		<ProxyService>
+			<proxyUrl>/local_websocket/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8089</targetUrl>
+		</ProxyService>
+		<ProxyService>
+			<proxyUrl>/local_tick/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8014</targetUrl>
+		</ProxyService>
+		<ProxyService>
+			<proxyUrl>/local_notification/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8018</targetUrl>
+		</ProxyService>
+		<ProxyService>
+			<proxyUrl>/local_matching/*</proxyUrl>
+			<targetUrl>http://127.0.0.1:8091</targetUrl>
+		</ProxyService>
+
+	</ProxyServices>
+
+</Proxy>

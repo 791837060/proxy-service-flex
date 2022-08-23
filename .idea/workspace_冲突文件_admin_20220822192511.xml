@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e807d644-5101-48a9-9ad2-8099ee133764" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/mitre/dsmiley/httpproxy/HttpServletRequestReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/mitre/dsmiley/httpproxy/RequestWrapperUl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/mitre/dsmiley/httpproxy/StreamUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/mitre/dsmiley/httpproxy/WritingFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proxyservice.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gwb/proxyservice/util/ProxyConfigUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gwb/proxyservice/util/ProxyConfigUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/mitre/dsmiley/httpproxy/ProxyServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/mitre/dsmiley/httpproxy/ProxyServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/proxySetting.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/proxySetting.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="27izQUmtmLwknqhEk5Prjghf1nt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.mitre.dsmiley.httpproxy" />
+    </key>
+  </component>
+  <component name="RestServicesNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.gwb.proxyservice.App" />
+      <module name="proxyservice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gwb.proxyservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e807d644-5101-48a9-9ad2-8099ee133764" name="Default Changelist" comment="" />
+      <created>1649817678386</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649817678386</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/mitre/dsmiley/httpproxy/ProxyServlet.java</url>
+          <line>447</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/mitre/dsmiley/httpproxy/ProxyServlet.java</url>
+          <line>544</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
