@@ -1,5 +1,6 @@
 package com.gwb.proxyservice;
-
+// mvn compile -Dmaven.test.skip=true
+// mvn install -Dmaven.test.skip=true
 import javax.servlet.http.HttpServlet;
 
 import org.eclipse.jetty.server.Server;

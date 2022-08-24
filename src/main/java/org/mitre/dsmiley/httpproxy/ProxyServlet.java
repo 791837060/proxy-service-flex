@@ -17,6 +17,11 @@
 package org.mitre.dsmiley.httpproxy;
 
 import lombok.extern.slf4j.Slf4j;
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
 import javax.servlet.ReadListener;
 import javax.servlet.ServletException;
@@ -440,6 +445,16 @@ public class ProxyServlet extends HttpServlet {
     String curl =  getCurl(reqestWrapper).replace(requestURL, realRequestURL);
     System.out.println(curl);
     System.out.println();
+
+    if(realRequestLine.equals("POST")){
+      // System.out.println("okPost:" +okPost(realRequestURL,requestBody,token,cookie));
+      // System.out.println("okPost:" +okPost(realRequestURL,requestBody,token2,cookie2));
+    }else{
+      // System.out.println("okGet:" + okGet(realRequestURL,requestBody,token,cookie));
+      // System.out.println("okGet:" + okGet(realRequestURL,requestBody,token2,cookie2));
+    }
+
+    System.out.println();
     System.out.println("_________________end________________________end________________________end________________________end________________________end_______ ");
     WritingFile.appendFile("/Users/zenghuikang/workspace/swaggerul/proxy-service-flex/src/main/resources/request_log.txt",resultJson+"\n",true);
     WritingFile.appendFile("/Users/zenghuikang/workspace/swaggerul/proxy-service-flex/src/main/resources/request_log.txt","_________________end________________________end________________________end________________________end________________________end_______ \n",true);
@@ -447,6 +462,67 @@ public class ProxyServlet extends HttpServlet {
     // 重置游标
     in.reset();
     return in;
+  }
+
+
+  public String okGet(String url,String requestBody,String token,String cookie){
+      OkHttpClient client = new OkHttpClient().newBuilder()
+      .build();
+    Request request = new Request.Builder()
+      .url(url)
+      .method("GET", null)
+      .addHeader("Cookie", "locale=en-US; locale=zh-CN")
+      .addHeader("x-cf-token", token)
+                                .addHeader("cookie", cookie)
+      .build();
+    Response response;
+    try {
+      response = client.newCall(request).execute();
+      String responseBody = response.body().string();
+      //esponseBody:{"data":{"pair":null}}
+      log.info("responseBody:{} token:{}",responseBody,token);
+      return responseBody;
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+    return "{}";
+  }
+  public String okPost(String url,String requestBody,String token,String cookie){
+      OkHttpClient client = new OkHttpClient().newBuilder()
+                                    .build();
+      MediaType mediaType = MediaType.parse("application/json");
+      RequestBody body = RequestBody.create(mediaType, requestBody);
+      Request request = new Request.Builder()
+                                .url(url)
+                                .method("POST", body)
+                                .addHeader("x-cf-token", token)
+                                .addHeader("cookie", cookie)
+                                .addHeader("accept", "*/*")
+                                .addHeader("accept-language", "zh-CN,zh;q=0.9")
+                                .addHeader("cache-control", "no-cache")
+                                .addHeader("content-type", "application/json")
+                                .addHeader("pragma", "no-cache")
+                                .addHeader("sec-ch-ua", "\".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"")
+                                .addHeader("sec-ch-ua-mobile", "?0")
+                                .addHeader("sec-ch-ua-platform", "\"macOS\"")
+                                .addHeader("sec-fetch-dest", "empty")
+                                .addHeader("sec-fetch-mode", "cors")
+                                .addHeader("sec-fetch-site", "same-site")
+                                .addHeader("user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36")
+                                .build();
+                                String responseBody ="{}";
+      try {
+          Response response = client.newCall(request).execute();
+          responseBody = response.body().string();
+          //responseBody:{"data":{"pair":null}}
+          log.info("responseBody:{} token:{}",responseBody,token);
+        
+      } catch (IOException e) {
+          log.error("PancakeSwapServiceImpl findPoolByPoolAddress" , e);
+          return null;
+      }
+      return responseBody;
   }
 
   protected void handleRequestException(HttpRequest proxyRequest, Exception e) throws ServletException, IOException {
@@ -541,9 +617,13 @@ public class ProxyServlet extends HttpServlet {
 
   String requestURL="";
   String realRequestURL="";
+  String realRequestLine="";
   String requestBody="";
   String token = "";
   String cookie = "";
+
+  String token2 = "";
+  String cookie2 = "";
 
   /**
    * Copy request headers from the servlet client to the proxy request.
@@ -615,6 +695,38 @@ public class ProxyServlet extends HttpServlet {
 
     token = readConfig(tokenFile);
     cookie = readConfig(cookieFile);
+
+
+    String tokenFile2 = "token_2";
+    String cookieFile2 = "cookie_2";
+
+    if(requestUR.contains("/local_")){
+      tokenFile2 = tokenFile2+"_durian";
+      cookieFile2 = cookieFile2+"_durian";
+    }
+
+    if(requestUR.contains("/durian/")){
+      tokenFile2 = tokenFile2+"_durian";
+      cookieFile2 = cookieFile2+"_durian";
+    }
+
+    if(requestUR.contains("/stg/")){
+      tokenFile2 = tokenFile2+"_stg";
+      cookieFile2 = cookieFile2+"_stg";
+    }
+
+    if(requestUR.contains("/lemon/")){
+      tokenFile2 = tokenFile2+"_lemon";
+      cookieFile2 = cookieFile2+"_lemon";
+    }
+
+    if(requestUR.contains("/kiwi/")){
+      tokenFile2 = tokenFile2+"_kiwi";
+      cookieFile2 = cookieFile2+"_kiwi";
+    }
+
+    token2 = readConfig(tokenFile2);
+    cookie2 = readConfig(cookieFile2);
 
     proxyRequest.setHeader("x-cf-token", token);
     proxyRequest.setHeader("cookie", cookie);
@@ -689,6 +801,7 @@ Accept,application/json, text/plain, *\/*
     System.out.println(df.format(new Date()) + "  local requestURL: "+requestURL);
     System.out.println(df.format(new Date()) + "  real  requestURL: "+proxyRequest.getRequestLine());
     realRequestURL = proxyRequest.getRequestLine().getUri();
+    realRequestLine = proxyRequest.getRequestLine().getMethod();
     // System.out.println(proxyRequest.getRequestLine().getUri());
     System.out.println("request body:"+parJson);
     requestBody =parJson;
