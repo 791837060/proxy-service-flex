@@ -621,9 +621,10 @@ public class ProxyServlet extends HttpServlet {
   String requestBody="";
   String token = "";
   String cookie = "";
+  String authorization = "";
 
-  String token2 = "";
-  String cookie2 = "";
+ /*  String token2 = "";
+  String cookie2 = ""; */
 
   /**
    * Copy request headers from the servlet client to the proxy request.
@@ -667,40 +668,47 @@ public class ProxyServlet extends HttpServlet {
     String requestUR = servletRequest.getRequestURL().toString();
     String tokenFile = "token";
     String cookieFile = "cookie";
+    String authorizationFile = "authorization";
 
     if(requestUR.contains("/local_")){
       tokenFile = tokenFile+"_durian";
       cookieFile = cookieFile+"_durian";
+      authorizationFile = authorizationFile+"_durian";
     }
 
     if(requestUR.contains("/durian/")){
       tokenFile = tokenFile+"_durian";
       cookieFile = cookieFile+"_durian";
+      authorizationFile = authorizationFile+"_durian";
     }
 
     if(requestUR.contains("/stg/")){
       tokenFile = tokenFile+"_stg";
       cookieFile = cookieFile+"_stg";
+      authorizationFile = authorizationFile+"_stg";
     }
 
     if(requestUR.contains("/lemon/")){
       tokenFile = tokenFile+"_lemon";
       cookieFile = cookieFile+"_lemon";
+      authorizationFile = authorizationFile+"_lemon";
     }
 
     if(requestUR.contains("/kiwi/")){
       tokenFile = tokenFile+"_kiwi";
       cookieFile = cookieFile+"_kiwi";
+      authorizationFile = authorizationFile+"_kiwi";
     }
 
     token = readConfig(tokenFile);
     cookie = readConfig(cookieFile);
+    authorization = readConfig(authorizationFile);
 
 
-    String tokenFile2 = "token_2";
-    String cookieFile2 = "cookie_2";
+    /* String tokenFile2 = "token_2";
+    String cookieFile2 = "cookie_2"; */
 
-    if(requestUR.contains("/local_")){
+    /* if(requestUR.contains("/local_")){
       tokenFile2 = tokenFile2+"_durian";
       cookieFile2 = cookieFile2+"_durian";
     }
@@ -726,10 +734,11 @@ public class ProxyServlet extends HttpServlet {
     }
 
     token2 = readConfig(tokenFile2);
-    cookie2 = readConfig(cookieFile2);
+    cookie2 = readConfig(cookieFile2); */
 
     proxyRequest.setHeader("x-cf-token", token);
     proxyRequest.setHeader("cookie", cookie);
+    proxyRequest.setHeader("authorization", authorization);
 
     System.out.println("cookie: "+cookie);
     System.out.println("x-cf-token: "+token);
