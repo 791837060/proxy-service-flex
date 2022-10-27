@@ -40911,3 +40911,349 @@ _________________end________________________end________________________end______
   ]
 }
 _________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": 692
+}
+2022-10-23 06:33:15  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/markets/admin/account/profile/find HTTP/1.1
+{
+  "msg": "返回空"
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": 692
+}
+2022-10-23 06:34:31  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/markets/admin/account/profile/find HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": [
+    {
+      "accountId": 692,
+      "marketCode": "FLEX-USD-SWAP-LIN",
+      "marginType": "ISOLATED",
+      "leverage": 6,
+      "lastUpdated": 1662441086665,
+      "exclusive": false
+    },
+    {
+      "accountId": 692,
+      "marketCode": "BTC-USD-SWAP-LIN",
+      "marginType": "CROSS",
+      "leverage": 4,
+      "lastUpdated": 1661482940626,
+      "exclusive": false
+    }
+  ]
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "marketGroup": "FLEX"
+}
+2022-10-23 06:35:52  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/markets/admin/account/risk/tier/find HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": []
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": 692,
+  "marketGroup": "FLEX1",
+  "tierType": "1",
+  "lastUpdated": 1660774606516
+}
+2022-10-23 06:36:39  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/markets/admin/account/risk/tier/add HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "accountId": 692,
+    "marketGroup": "FLEX1",
+    "tierType": "1",
+    "lastUpdated": 1660774606516
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "marketGroup": "FLEX"
+}
+2022-10-23 06:36:47  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/markets/admin/account/risk/tier/find HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": []
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "marketGroup": "FLEX"
+}
+2022-10-23 06:36:48  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/markets/admin/account/risk/tier/find HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": []
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": 692,
+  "marketGroup": "FLEX1",
+  "tierType": "1",
+  "lastUpdated": 1660774606516
+}
+2022-10-23 06:36:57  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/markets/admin/account/risk/tier/add HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "accountId": 692,
+    "marketGroup": "FLEX1",
+    "tierType": "1",
+    "lastUpdated": 1660774606516
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "marketGroup": "FLEX1"
+}
+2022-10-23 06:37:12  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/markets/admin/account/risk/tier/find HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": [
+    {
+      "accountId": 692,
+      "marketGroup": "FLEX1",
+      "tierType": "1",
+      "lastUpdated": 1666507017279
+    }
+  ]
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": 692,
+  "marketGroup": "FLEX",
+  "tierType": "ISOLATED",
+  "lastUpdated": 1660774606516
+}
+2022-10-23 06:38:19  getRequestLine==>  DELETE https://api-durian.cfdev.pro/v2/markets/admin/account/risk/tier/del HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "accountId": 692,
+    "marketGroup": "FLEX",
+    "tierType": "ISOLATED",
+    "lastUpdated": 1660774606516
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": 692,
+  "marketGroup": "FLEX",
+  "tierType": "ISOLATED",
+  "lastUpdated": 1660774606516
+}
+2022-10-23 06:38:24  getRequestLine==>  DELETE https://api-durian.cfdev.pro/v2/markets/admin/account/risk/tier/del HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "accountId": 692,
+    "marketGroup": "FLEX",
+    "tierType": "ISOLATED",
+    "lastUpdated": 1660774606516
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "marketGroup": "FLEX1"
+}
+2022-10-23 06:38:42  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/markets/admin/account/risk/tier/find HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": [
+    {
+      "accountId": 692,
+      "marketGroup": "FLEX1",
+      "tierType": "1",
+      "lastUpdated": 1666507017279
+    }
+  ]
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "marketGroup": "FLEX1"
+}
+2022-10-23 06:38:43  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/markets/admin/account/risk/tier/find HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": [
+    {
+      "accountId": 692,
+      "marketGroup": "FLEX1",
+      "tierType": "1",
+      "lastUpdated": 1666507017279
+    }
+  ]
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": 692,
+  "marketGroup": "FLEX1",
+  "tierType": "ISOLATED",
+  "lastUpdated": 1660774606516
+}
+2022-10-23 06:38:49  getRequestLine==>  DELETE https://api-durian.cfdev.pro/v2/markets/admin/account/risk/tier/del HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "accountId": 692,
+    "marketGroup": "FLEX1",
+    "tierType": "ISOLATED",
+    "lastUpdated": 1660774606516
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "marketGroup": "FLEX1"
+}
+2022-10-23 06:38:59  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/markets/admin/account/risk/tier/find HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": []
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "accountId": 692,
+  "marketGroup": "FLEX1",
+  "tierType": "1",
+  "lastUpdated": 1660774606516
+}
+2022-10-23 10:57:49  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/markets/time/out HTTP/1.1
+{
+  "timestamp": 1666522669985,
+  "status": 404,
+  "error": "Not Found",
+  "message": "Not Found",
+  "path": "/time/out"
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "amount": 50000.000000000,
+  "balanceOrPosition": "BALANCE",
+  "created": 1666516388699,
+  "data": "{\"accountId\":13673088,\"ammAccountId\":13673617,\"direction\":\"NEUTRAL\",\"lockTime\":1674292384426,\"lowerBound\":0.00011092064,\"market\":\"XIO-USD-SWAP-PER\",\"marketPrice\":0.011092064,\"maxLeverage\":1,\"qty1\":50000.000000000,\"stakedCoin1\":\"USD\",\"upperBound\":0.055460320}",
+  "fromAccountId": 13673088,
+  "instrument": "USD",
+  "message": "",
+  "reference": "{\"txId\":\"{\\\"amount\\\":50000.000000000,\\\"balanceOrPosition\\\":\\\"BALANCE\\\",\\\"created\\\":1666516388699,\\\"data\\\":\\\"{\\\\\\\"accountId\\\\\\\":13673088,\\\\\\\"ammAccountId\\\\\\\":13673617,\\\\\\\"direction\\\\\\\":\\\\\\\"NEUTRAL\\\\\\\",\\\\\\\"lockTime\\\\\\\":1674292384426,\\\\\\\"lowerBound\\\\\\\":0.00011092064,\\\\\\\"market\\\\\\\":\\\\\\\"XIO-USD-SWAP-PER\\\\\\\",\\\\\\\"marketPrice\\\\\\\":0.011092064,\\\\\\\"maxLeverage\\\\\\\":1,\\\\\\\"qty1\\\\\\\":50000.000000000,\\\\\\\"stakedCoin1\\\\\\\":\\\\\\\"USD\\\\\\\",\\\\\\\"upperBound\\\\\\\":0.055460320}\\\",\\\"fromAccountId\\\":13673088,\\\"instrument\\\":\\\"USD\\\",\\\"skipValidation\\\":false,\\\"status\\\":\\\"NEW\\\",\\\"toAccountId\\\":13673617,\\\"transferType\\\":\\\"AMM_CREATE\\\"}\"}",
+  "skipValidation": false,
+  "status": "NEW",
+  "toAccountId": 13673617,
+  "transferType": "AMM_CREATE"
+}
+2022-10-23 10:59:55  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/markets/time/out HTTP/1.1
+{
+  "timestamp": 1666522795278,
+  "status": 404,
+  "error": "Not Found",
+  "message": "Not Found",
+  "path": "/time/out"
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "amount": 50000.000000000,
+  "balanceOrPosition": "BALANCE",
+  "created": 1666516388699,
+  "data": "{\"accountId\":13673088,\"ammAccountId\":13673617,\"direction\":\"NEUTRAL\",\"lockTime\":1674292384426,\"lowerBound\":0.00011092064,\"market\":\"XIO-USD-SWAP-PER\",\"marketPrice\":0.011092064,\"maxLeverage\":1,\"qty1\":50000.000000000,\"stakedCoin1\":\"USD\",\"upperBound\":0.055460320}",
+  "fromAccountId": 13673088,
+  "instrument": "USD",
+  "message": "",
+  "reference": "{\"txId\":\"{\\\"amount\\\":50000.000000000,\\\"balanceOrPosition\\\":\\\"BALANCE\\\",\\\"created\\\":1666516388699,\\\"data\\\":\\\"{\\\\\\\"accountId\\\\\\\":13673088,\\\\\\\"ammAccountId\\\\\\\":13673617,\\\\\\\"direction\\\\\\\":\\\\\\\"NEUTRAL\\\\\\\",\\\\\\\"lockTime\\\\\\\":1674292384426,\\\\\\\"lowerBound\\\\\\\":0.00011092064,\\\\\\\"market\\\\\\\":\\\\\\\"XIO-USD-SWAP-PER\\\\\\\",\\\\\\\"marketPrice\\\\\\\":0.011092064,\\\\\\\"maxLeverage\\\\\\\":1,\\\\\\\"qty1\\\\\\\":50000.000000000,\\\\\\\"stakedCoin1\\\\\\\":\\\\\\\"USD\\\\\\\",\\\\\\\"upperBound\\\\\\\":0.055460320}\\\",\\\"fromAccountId\\\":13673088,\\\"instrument\\\":\\\"USD\\\",\\\"skipValidation\\\":false,\\\"status\\\":\\\"NEW\\\",\\\"toAccountId\\\":13673617,\\\"transferType\\\":\\\"AMM_CREATE\\\"}\"}",
+  "skipValidation": false,
+  "status": "NEW",
+  "toAccountId": 13673617,
+  "transferType": "AMM_CREATE"
+}
+2022-10-23 11:03:13  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/markets/time/out HTTP/1.1
+{
+  "timestamp": 1666522993676,
+  "status": 404,
+  "error": "Not Found",
+  "message": "Not Found",
+  "path": "/time/out"
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "tokenFullName": "ELON",
+  "token": "ELON",
+  "network": "ETH",
+  "tokenId": "0x761d38e5ddf6ccf6cf7c55759d5210750b5d60f3",
+  "dex": "UNIV2",
+  "poolAddress": "0x7b73644935b8e68019ac6356c40661e1bc315860",
+  "logo": "https://img0.baidu.com/it/u\u003d239433335,797856775\u0026fm\u003d253\u0026fmt\u003dauto\u0026app\u003d138\u0026f\u003dJPEG?w\u003d500\u0026h\u003d292",
+  "marketType": "Perpetual",
+  "twitter": "https://img0.baidu.com/it/u\u003d239433335,797856775\u0026fm\u003d253\u0026fmt\u003dauto\u0026app\u003d138\u0026f\u003dJPEG?w\u003d500\u0026h\u003d292",
+  "discord": "https://img0.baidu.com/it/u\u003d239433335,797856775\u0026fm\u003d253\u0026fmt\u003dauto\u0026app\u003d138\u0026f\u003dJPEG?w\u003d500\u0026h\u003d292",
+  "telegram": "https://img0.baidu.com/it/u\u003d239433335,797856775\u0026fm\u003d253\u0026fmt\u003dauto\u0026app\u003d138\u0026f\u003dJPEG?w\u003d500\u0026h\u003d292",
+  "website": "https://img0.baidu.com/it/u\u003d239433335,797856775\u0026fm\u003d253\u0026fmt\u003dauto\u0026app\u003d138\u0026f\u003dJPEG?w\u003d500\u0026h\u003d292",
+  "ammTvl": 50000
+}
+2022-10-23 11:15:22  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/markets/protected/create/listing_form HTTP/1.1
+{
+  "msg": "返回空"
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+{
+  "tokenFullName": "ELON",
+  "token": "ELON",
+  "network": "ETH",
+  "tokenId": "0x761d38e5ddf6ccf6cf7c55759d5210750b5d60f3",
+  "dex": "UNIV2",
+  "poolAddress": "0x7b73644935b8e68019ac6356c40661e1bc315860",
+  "logo": "https://img0.baidu.com/it/u\u003d239433335,797856775\u0026fm\u003d253\u0026fmt\u003dauto\u0026app\u003d138\u0026f\u003dJPEG?w\u003d500\u0026h\u003d292",
+  "marketType": "Perpetual",
+  "twitter": "https://img0.baidu.com/it/u\u003d239433335,797856775\u0026fm\u003d253\u0026fmt\u003dauto\u0026app\u003d138\u0026f\u003dJPEG?w\u003d500\u0026h\u003d292",
+  "discord": "https://img0.baidu.com/it/u\u003d239433335,797856775\u0026fm\u003d253\u0026fmt\u003dauto\u0026app\u003d138\u0026f\u003dJPEG?w\u003d500\u0026h\u003d292",
+  "telegram": "https://img0.baidu.com/it/u\u003d239433335,797856775\u0026fm\u003d253\u0026fmt\u003dauto\u0026app\u003d138\u0026f\u003dJPEG?w\u003d500\u0026h\u003d292",
+  "website": "https://img0.baidu.com/it/u\u003d239433335,797856775\u0026fm\u003d253\u0026fmt\u003dauto\u0026app\u003d138\u0026f\u003dJPEG?w\u003d500\u0026h\u003d292",
+  "ammTvl": 50000
+}
+2022-10-23 11:16:55  getRequestLine==>  POST https://api-durian.cfdev.pro/v2/markets/protected/create/listing_form HTTP/1.1
+{
+  "success": true,
+  "code": "0000",
+  "data": {
+    "id": "807578555796226056",
+    "tokenFullName": "ELON",
+    "token": "ELON",
+    "network": "ETH",
+    "tokenId": "0x761d38e5ddf6ccf6cf7c55759d5210750b5d60f3",
+    "dex": "UNIV2",
+    "poolAddress": "0x7b73644935b8e68019ac6356c40661e1bc315860",
+    "logo": "https://img0.baidu.com/it/u\u003d239433335,797856775\u0026fm\u003d253\u0026fmt\u003dauto\u0026app\u003d138\u0026f\u003dJPEG?w\u003d500\u0026h\u003d292",
+    "marketType": "Perpetual",
+    "twitter": "https://img0.baidu.com/it/u\u003d239433335,797856775\u0026fm\u003d253\u0026fmt\u003dauto\u0026app\u003d138\u0026f\u003dJPEG?w\u003d500\u0026h\u003d292",
+    "discord": "https://img0.baidu.com/it/u\u003d239433335,797856775\u0026fm\u003d253\u0026fmt\u003dauto\u0026app\u003d138\u0026f\u003dJPEG?w\u003d500\u0026h\u003d292",
+    "telegram": "https://img0.baidu.com/it/u\u003d239433335,797856775\u0026fm\u003d253\u0026fmt\u003dauto\u0026app\u003d138\u0026f\u003dJPEG?w\u003d500\u0026h\u003d292",
+    "website": "https://img0.baidu.com/it/u\u003d239433335,797856775\u0026fm\u003d253\u0026fmt\u003dauto\u0026app\u003d138\u0026f\u003dJPEG?w\u003d500\u0026h\u003d292",
+    "ammTvl": 50000,
+    "creator": 13672929,
+    "created": 1666523815875,
+    "updated": 1666523815875,
+    "status": "SUBMIT"
+  }
+}
+_________________end________________________end________________________end________________________end________________________end_______ 
+2022-10-27 03:17:21  getRequestLine==>  GET http://172.21.11.84:30298/wallet/13673259 HTTP/1.1
+2022-10-27 03:18:13  getRequestLine==>  GET http://172.21.11.84:30298/wallet/13673259 HTTP/1.1
+2022-10-27 03:20:11  getRequestLine==>  GET http://172.21.11.84:30298/wallet/13673259 HTTP/1.1
+{}
+_________________end________________________end________________________end________________________end________________________end_______ 
+2022-10-27 03:20:18  getRequestLine==>  GET http://172.21.11.84:30298/wallet/13673259 HTTP/1.1
+{}
+_________________end________________________end________________________end________________________end________________________end_______ 

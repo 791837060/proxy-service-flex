@@ -27,6 +27,21 @@
 		</ProxyService>
 
 		<ProxyService>
+			<proxyUrl>/ignite_durian/*</proxyUrl>
+			<targetUrl>http://172.21.11.84:30298</targetUrl>
+		</ProxyService>
+
+		<ProxyService>
+			<proxyUrl>/ignite_lemon/*</proxyUrl>
+			<targetUrl>http://172.21.11.86:9988</targetUrl>
+		</ProxyService>
+
+		<ProxyService>
+			<proxyUrl>/ignite_stage/*</proxyUrl>
+			<targetUrl>http://172.43.13.59:9988</targetUrl>
+		</ProxyService>
+
+		<ProxyService>
 			<proxyUrl>/lemon/*</proxyUrl>
 			<targetUrl>https://api-lemon.cfdev.pro</targetUrl>
 		</ProxyService>

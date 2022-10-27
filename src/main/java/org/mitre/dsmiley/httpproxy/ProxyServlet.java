@@ -388,9 +388,14 @@ public class ProxyServlet extends HttpServlet {
       json = "{\"msg\":\"返回空\"}";
     }
     JsonParser jsonParser = new JsonParser();
-    JsonObject jsonObject = jsonParser.parse(json).getAsJsonObject();
-    Gson gson = new GsonBuilder().setPrettyPrinting().create();
-    return gson.toJson(jsonObject);
+    try {
+      JsonObject jsonObject = jsonParser.parse(json).getAsJsonObject();
+      Gson gson = new GsonBuilder().setPrettyPrinting().create();
+      return gson.toJson(jsonObject);
+    } catch (Exception e) {
+      //TODO: handle exception
+    }
+    return "{}";
   }
   
   private InputStream logPrint(HttpResponse proxyResponse,HttpServletRequest servletRequest) throws IOException {
@@ -682,6 +687,24 @@ public class ProxyServlet extends HttpServlet {
       authorizationFile = authorizationFile+"_durian";
     }
 
+    if(requestUR.contains("/ignite_durian/")){
+      tokenFile = tokenFile+"_durian";
+      cookieFile = cookieFile+"_durian";
+      authorizationFile = authorizationFile+"_durian";
+    }
+
+    if(requestUR.contains("/ignite_lemon/")){
+      tokenFile = tokenFile+"_lemon";
+      cookieFile = cookieFile+"_lemon";
+      authorizationFile = authorizationFile+"_lemon";
+    }
+
+    if(requestUR.contains("/ignite_stage/")){
+      tokenFile = tokenFile+"_stg";
+      cookieFile = cookieFile+"_stg";
+      authorizationFile = authorizationFile+"_stg";
+    }
+
     if(requestUR.contains("/stg/")){
       tokenFile = tokenFile+"_stg";
       cookieFile = cookieFile+"_stg";
@@ -699,6 +722,15 @@ public class ProxyServlet extends HttpServlet {
       cookieFile = cookieFile+"_kiwi";
       authorizationFile = authorizationFile+"_kiwi";
     }
+
+    if(requestUR.contains("/time/out")){
+      try {
+        Thread.sleep(10000);
+      } catch (InterruptedException e) {
+          e.printStackTrace();
+      }
+    }
+    
 
     token = readConfig(tokenFile);
     cookie = readConfig(cookieFile);
