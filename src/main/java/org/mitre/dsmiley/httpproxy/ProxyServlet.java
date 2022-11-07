@@ -437,21 +437,38 @@ public class ProxyServlet extends HttpServlet {
 
 
     String resultJson = toPrettyFormat(result.toString());
-    System.out.println("response body: "+resultJson);
-
+    System.out.println("响应结果: "+resultJson);
     System.out.println();
-    String curl2 = "curl --location --request POST '"+realRequestURL+"' --header 'content-type: application/json;charset=UTF-8' --header 'x-cf-token: "+token+"' --header 'cookie: "+cookie+"' --data-raw '"+requestBody+"'";
+    
+    System.out.println("可在终端运行的curl: ");
+    //String curl2 = "curl --location --request "+requestMethod+" '"+realRequestURL+"' --header 'content-type: application/json;charset=UTF-8' --header 'x-cf-token: "+token+"' --header 'authorization: "+authorization+"' --data-raw '"+requestBody+"'";
+    String realRequestURL1 = "'"+realRequestURL+"'";
+    String token1 = "'x-cf-token: "+token+"'";
+    String cookie1 = "'cookie: "+cookie+"'";
+    String authorization1 = "'authorization: "+authorization+"'";
+    String requestBody1 = "'"+requestBody+"'";
+    String curl2 = "curl "+realRequestURL1+" \\\n" + "  -H 'pragma: no-cache' \\\n" + "  -H 'cache-control: no-cache' \\\n" + "  -H 'sec-ch-ua: \" Not A;Brand\";v=\"99\", \"Chromium\";v=\"99\", \"Google Chrome\";v=\"99\"' \\\n" + "  -H 'accept: application/json, text/plain, */*' \\\n" + "  -H 'sec-ch-ua-mobile: ?0' \\\n" + "  -H 'content-type: application/json;charset=UTF-8' \\\n" + "  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.83 Safari/537.36' \\\n" + "  -H 'sec-ch-ua-platform: \"macOS\"' \\\n" + "  -H 'sec-fetch-site: same-site' \\\n" + "  -H 'sec-fetch-mode: cors' \\\n" + "  -H 'sec-fetch-dest: empty' \\\n" + "  -H 'accept-language: zh-CN,zh;q=0.9' \\\n" 
+    + "  -H  "+cookie1+" \\\n" 
+    + "  -H  "+token1+" \\\n" 
+    + "  -H  "+authorization1+" \\\n";
+    if(!requestMethod.equals("GET")){
+      curl2 = curl2 + "  --data-raw "+requestBody1+" \\\n";
+    }
+    curl2 = curl2 + "  --compressed";
+    
     System.out.println(curl2);
     System.out.println();
-    String curl3 = "curl --location --request POST '"+requestURL+"' --header 'content-type: application/json;charset=UTF-8' --data-raw '"+requestBody+"'";
-    System.out.println(curl3);
-    System.out.println();
-    RequestWrapper reqestWrapper = new RequestWrapper((HttpServletRequest)servletRequest);
-    String curl =  getCurl(reqestWrapper).replace(requestURL, realRequestURL);
-    System.out.println(curl);
-    System.out.println();
 
-    if(realRequestLine.equals("POST")){
+    //String curl3 = "curl --location --request POST '"+requestURL+"' --header 'content-type: application/json;charset=UTF-8' --data-raw '"+requestBody+"'";
+    //System.out.println(curl3);
+    //System.out.println();
+
+    //RequestWrapper reqestWrapper = new RequestWrapper((HttpServletRequest)servletRequest);
+    //String curl =  getCurl(reqestWrapper).replace(requestURL, realRequestURL);
+    //System.out.println(curl);
+    //System.out.println();
+
+    if(!requestMethod.equals("GET")){
       // System.out.println("okPost:" +okPost(realRequestURL,requestBody,token,cookie));
       // System.out.println("okPost:" +okPost(realRequestURL,requestBody,token2,cookie2));
     }else{
@@ -461,6 +478,7 @@ public class ProxyServlet extends HttpServlet {
 
     System.out.println();
     System.out.println("_________________end________________________end________________________end________________________end________________________end_______ ");
+    
     WritingFile.appendFile("/Users/zenghuikang/workspace/swaggerul/proxy-service-flex/src/main/resources/request_log.txt",resultJson+"\n",true);
     WritingFile.appendFile("/Users/zenghuikang/workspace/swaggerul/proxy-service-flex/src/main/resources/request_log.txt","_________________end________________________end________________________end________________________end________________________end_______ \n",true);
 
@@ -622,7 +640,7 @@ public class ProxyServlet extends HttpServlet {
 
   String requestURL="";
   String realRequestURL="";
-  String realRequestLine="";
+  String requestMethod="";
   String requestBody="";
   String token = "";
   String cookie = "";
@@ -676,51 +694,51 @@ public class ProxyServlet extends HttpServlet {
     String authorizationFile = "authorization";
 
     if(requestUR.contains("/local_")){
-      tokenFile = tokenFile+"_durian";
-      cookieFile = cookieFile+"_durian";
-      authorizationFile = authorizationFile+"_durian";
+      tokenFile = "durian_"+tokenFile+"_durian";
+      cookieFile = "durian_"+cookieFile+"_durian";
+      authorizationFile = "durian_"+authorizationFile+"_durian";
     }
 
     if(requestUR.contains("/durian/")){
-      tokenFile = tokenFile+"_durian";
-      cookieFile = cookieFile+"_durian";
-      authorizationFile = authorizationFile+"_durian";
+      tokenFile = "durian_"+tokenFile+"_durian";
+      cookieFile = "durian_"+cookieFile+"_durian";
+      authorizationFile = "durian_"+authorizationFile+"_durian";
     }
 
     if(requestUR.contains("/ignite_durian/")){
-      tokenFile = tokenFile+"_durian";
-      cookieFile = cookieFile+"_durian";
-      authorizationFile = authorizationFile+"_durian";
+      tokenFile = "durian_"+tokenFile+"_durian";
+      cookieFile = "durian_"+cookieFile+"_durian";
+      authorizationFile = "durian_"+authorizationFile+"_durian";
     }
 
     if(requestUR.contains("/ignite_lemon/")){
-      tokenFile = tokenFile+"_lemon";
-      cookieFile = cookieFile+"_lemon";
-      authorizationFile = authorizationFile+"_lemon";
+      tokenFile = "lemon_"+tokenFile+"_lemon";
+      cookieFile = "lemon_"+cookieFile+"_lemon";
+      authorizationFile = "lemon_"+authorizationFile+"_lemon";
     }
 
     if(requestUR.contains("/ignite_stage/")){
-      tokenFile = tokenFile+"_stg";
-      cookieFile = cookieFile+"_stg";
-      authorizationFile = authorizationFile+"_stg";
+      tokenFile = "stg_"+tokenFile+"_stg";
+      cookieFile = "stg_"+cookieFile+"_stg";
+      authorizationFile = "stg_"+authorizationFile+"_stg";
     }
 
     if(requestUR.contains("/stg/")){
-      tokenFile = tokenFile+"_stg";
-      cookieFile = cookieFile+"_stg";
-      authorizationFile = authorizationFile+"_stg";
+      tokenFile = "stg_"+tokenFile+"_stg";
+      cookieFile = "stg_"+cookieFile+"_stg";
+      authorizationFile = "stg_"+authorizationFile+"_stg";
     }
 
     if(requestUR.contains("/lemon/")){
-      tokenFile = tokenFile+"_lemon";
-      cookieFile = cookieFile+"_lemon";
-      authorizationFile = authorizationFile+"_lemon";
+      tokenFile = "lemon_"+tokenFile+"_lemon";
+      cookieFile = "lemon_"+cookieFile+"_lemon";
+      authorizationFile = "lemon_"+authorizationFile+"_lemon";
     }
 
     if(requestUR.contains("/kiwi/")){
-      tokenFile = tokenFile+"_kiwi";
-      cookieFile = cookieFile+"_kiwi";
-      authorizationFile = authorizationFile+"_kiwi";
+      tokenFile = "kiwi_"+tokenFile+"_kiwi";
+      cookieFile = "kiwi_"+cookieFile+"_kiwi";
+      authorizationFile = "kiwi_"+authorizationFile+"_kiwi";
     }
 
     if(requestUR.contains("/time/out")){
@@ -770,7 +788,11 @@ public class ProxyServlet extends HttpServlet {
 
     proxyRequest.setHeader("x-cf-token", token);
     proxyRequest.setHeader("cookie", cookie);
-    proxyRequest.setHeader("authorization", authorization);
+
+    if(requestUR.contains("/admin/")){
+      proxyRequest.setHeader("authorization", authorization);
+    }
+   
 
     System.out.println("cookie: "+cookie);
     System.out.println("x-cf-token: "+token);
@@ -839,13 +861,22 @@ Accept,application/json, text/plain, *\/*
     
     System.out.println("_________________start___________________________start___________________________start___________________________start___________________________start__________");
     System.out.println();
-    System.out.println(df.format(new Date()) + "  local requestURL: "+requestURL);
-    System.out.println(df.format(new Date()) + "  real  requestURL: "+proxyRequest.getRequestLine());
+    System.out.println("请求时间: "+df.format(new Date()));
+    System.out.println("本机请求URL: "+requestURL);
+    //System.out.println("真实请求URL: "+proxyRequest.getRequestLine());
     realRequestURL = proxyRequest.getRequestLine().getUri();
-    realRequestLine = proxyRequest.getRequestLine().getMethod();
+    System.out.println("真实请求URL: "+realRequestURL);
+    requestMethod = proxyRequest.getRequestLine().getMethod();
     // System.out.println(proxyRequest.getRequestLine().getUri());
-    System.out.println("request body:"+parJson);
-    requestBody =parJson;
+    System.out.println("请求方法: "+requestMethod);
+    if("GET".equals(requestMethod)){
+      
+    }else{
+      System.out.println("请求 body:"+parJson);
+      requestBody =parJson;
+    }
+    
+    
     WritingFile.appendFile("/Users/zenghuikang/workspace/swaggerul/proxy-service-flex/src/main/resources/request_log.txt",df.format(new Date()) + "  getRequestLine==>  "+proxyRequest.getRequestLine().toString()+"\n",true);
 
 
@@ -860,7 +891,7 @@ Accept,application/json, text/plain, *\/*
   }
 
   private String readConfig(String name){
-    String A ="/Users/zenghuikang/Downloads/cookie_and_token";
+    String A ="/Users/zenghuikang/Downloads/0a_cookie_and_token";
     File file = new File(A);
     String maxStr = A+"/"+name+".json";
     //open the file
