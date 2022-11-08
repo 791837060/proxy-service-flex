@@ -437,10 +437,10 @@ public class ProxyServlet extends HttpServlet {
 
 
     String resultJson = toPrettyFormat(result.toString());
-    System.out.println("响应结果: "+resultJson);
-    System.out.println();
+    twoPrint("响应结果: "+resultJson);
+    twoPrint("");
     
-    System.out.println("可在终端运行的curl: ");
+    twoPrint("可在终端运行的curl: ");
     //String curl2 = "curl --location --request "+requestMethod+" '"+realRequestURL+"' --header 'content-type: application/json;charset=UTF-8' --header 'x-cf-token: "+token+"' --header 'authorization: "+authorization+"' --data-raw '"+requestBody+"'";
     String realRequestURL1 = "'"+realRequestURL+"'";
     String token1 = "'x-cf-token: "+token+"'";
@@ -456,32 +456,28 @@ public class ProxyServlet extends HttpServlet {
     }
     curl2 = curl2 + "  --compressed";
     
-    System.out.println(curl2);
-    System.out.println();
+    twoPrint(curl2);
+    twoPrint("");
 
     //String curl3 = "curl --location --request POST '"+requestURL+"' --header 'content-type: application/json;charset=UTF-8' --data-raw '"+requestBody+"'";
-    //System.out.println(curl3);
-    //System.out.println();
+    //twoPrint(curl3);
+    //twoPrint("");
 
     //RequestWrapper reqestWrapper = new RequestWrapper((HttpServletRequest)servletRequest);
     //String curl =  getCurl(reqestWrapper).replace(requestURL, realRequestURL);
-    //System.out.println(curl);
-    //System.out.println();
+    //twoPrint(curl);
+    //twoPrint("");
 
     if(!requestMethod.equals("GET")){
-      // System.out.println("okPost:" +okPost(realRequestURL,requestBody,token,cookie));
-      // System.out.println("okPost:" +okPost(realRequestURL,requestBody,token2,cookie2));
+      // twoPrint("okPost:" +okPost(realRequestURL,requestBody,token,cookie));
+      // twoPrint("okPost:" +okPost(realRequestURL,requestBody,token2,cookie2));
     }else{
-      // System.out.println("okGet:" + okGet(realRequestURL,requestBody,token,cookie));
-      // System.out.println("okGet:" + okGet(realRequestURL,requestBody,token2,cookie2));
+      // twoPrint("okGet:" + okGet(realRequestURL,requestBody,token,cookie));
+      // twoPrint("okGet:" + okGet(realRequestURL,requestBody,token2,cookie2));
     }
 
-    System.out.println();
-    System.out.println("_________________end________________________end________________________end________________________end________________________end_______ ");
-    
-    WritingFile.appendFile("/Users/zenghuikang/workspace/swaggerul/proxy-service-flex/src/main/resources/request_log.txt",resultJson+"\n",true);
-    WritingFile.appendFile("/Users/zenghuikang/workspace/swaggerul/proxy-service-flex/src/main/resources/request_log.txt","_________________end________________________end________________________end________________________end________________________end_______ \n",true);
-
+    twoPrint("");
+    twoPrint("_________________end________________________end________________________end________________________end________________________end_______ ");
     // 重置游标
     in.reset();
     return in;
@@ -597,7 +593,6 @@ public class ProxyServlet extends HttpServlet {
     String par = HttpServletRequestReader.ReadAsChars(requestWrapper);
 
     parJson = toPrettyFormat(par.toString());
-    WritingFile.appendFile("/Users/zenghuikang/workspace/swaggerul/proxy-service-flex/src/main/resources/request_log.txt",parJson+"\n",true);
     InputStreamEntity inputStreamEntity = new InputStreamEntity(requestWrapper.getInputStream(), getContentLength(requestWrapper));
     eProxyRequest.setEntity(inputStreamEntity);
     return eProxyRequest;
@@ -859,27 +854,22 @@ Accept,application/json, text/plain, *\/*
 
     SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
     
-    System.out.println("_________________start___________________________start___________________________start___________________________start___________________________start__________");
-    System.out.println();
-    System.out.println("请求时间: "+df.format(new Date()));
-    System.out.println("本机请求URL: "+requestURL);
-    //System.out.println("真实请求URL: "+proxyRequest.getRequestLine());
+    twoPrint("_________________start___________________________start___________________________start___________________________start___________________________start__________");
+    twoPrint("");
+    twoPrint("请求时间: "+df.format(new Date()));
+    twoPrint("本机请求URL: "+requestURL);
+    //twoPrint("真实请求URL: "+proxyRequest.getRequestLine());
     realRequestURL = proxyRequest.getRequestLine().getUri();
-    System.out.println("真实请求URL: "+realRequestURL);
+    twoPrint("真实请求URL: "+realRequestURL);
     requestMethod = proxyRequest.getRequestLine().getMethod();
-    // System.out.println(proxyRequest.getRequestLine().getUri());
-    System.out.println("请求方法: "+requestMethod);
+    // twoPrint(proxyRequest.getRequestLine().getUri());
+    twoPrint("请求方法: "+requestMethod);
     if("GET".equals(requestMethod)){
       
     }else{
-      System.out.println("请求 body:"+parJson);
+      twoPrint("请求 body:"+parJson);
       requestBody =parJson;
     }
-    
-    
-    WritingFile.appendFile("/Users/zenghuikang/workspace/swaggerul/proxy-service-flex/src/main/resources/request_log.txt",df.format(new Date()) + "  getRequestLine==>  "+proxyRequest.getRequestLine().toString()+"\n",true);
-
-
     HttpParams params = proxyRequest.getParams();
 
     Header[] allHeaders = proxyRequest.getAllHeaders();
@@ -887,6 +877,16 @@ Accept,application/json, text/plain, *\/*
       if(allHeaders[i].getName().equalsIgnoreCase("")){
         System.out.println(allHeaders[i].getName() +":"+allHeaders[i].getValue());
       }
+    }
+  }
+
+  public void twoPrint(String log){
+    System.out.println(log);
+    try {
+      WritingFile.appendFile("/Users/zenghuikang/Downloads/request_log.txt",log+"\n",true);
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
     }
   }
 
