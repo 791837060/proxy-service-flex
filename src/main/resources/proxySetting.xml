@@ -32,7 +32,22 @@
 		</ProxyService>
 
 		<ProxyService>
+			<proxyUrl>/ignite_durian_proxy/*</proxyUrl>
+			<targetUrl>http://172.21.31.3:9993</targetUrl>
+		</ProxyService>
+
+		<ProxyService>
 			<proxyUrl>/ignite_lemon/*</proxyUrl>
+			<targetUrl>http://172.21.31.3:9991</targetUrl>  <!-- 这个是代理 -->
+		</ProxyService>
+
+		<ProxyService>
+			<proxyUrl>/ignite_kiwi/*</proxyUrl>
+			<targetUrl>http://172.21.31.3:9992</targetUrl>  <!-- 这个是代理 -->
+		</ProxyService>
+
+		<ProxyService>
+			<proxyUrl>/ignite_lemon1/*</proxyUrl>
 			<targetUrl>http://172.21.11.86:9988</targetUrl>
 		</ProxyService>
 

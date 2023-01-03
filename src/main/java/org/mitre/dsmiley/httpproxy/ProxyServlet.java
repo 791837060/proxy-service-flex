@@ -395,7 +395,7 @@ public class ProxyServlet extends HttpServlet {
     } catch (Exception e) {
       //TODO: handle exception
     }
-    return "{}";
+    return json;
   }
   
   private InputStream logPrint(HttpResponse proxyResponse,HttpServletRequest servletRequest) throws IOException {
@@ -745,9 +745,15 @@ public class ProxyServlet extends HttpServlet {
     }
     
 
-    token = readConfig(tokenFile);
+    /* token = readConfig(tokenFile);
     cookie = readConfig(cookieFile);
-    authorization = readConfig(authorizationFile);
+    authorization = readConfig(authorizationFile); */
+
+    Map<String,String> headMap = readAllLine(cookieFile);
+
+    token = headMap.get("x-cf-token").trim();
+    cookie = headMap.get("cookie").trim();
+    authorization = headMap.get("authorization") == null ? "" : headMap.get("authorization").trim();
 
 
     /* String tokenFile2 = "token_2";
@@ -856,18 +862,20 @@ Accept,application/json, text/plain, *\/*
     
     twoPrint("_________________start___________________________start___________________________start___________________________start___________________________start__________");
     twoPrint("");
-    twoPrint("请求时间: "+df.format(new Date()));
     twoPrint("本机请求URL: "+requestURL);
+    requestMethod = proxyRequest.getRequestLine().getMethod();
+    twoPrint("请求方法: "+requestMethod);
+    twoPrint("请求时间: "+df.format(new Date()));
+    
     //twoPrint("真实请求URL: "+proxyRequest.getRequestLine());
     realRequestURL = proxyRequest.getRequestLine().getUri();
-    twoPrint("真实请求URL: "+realRequestURL);
-    requestMethod = proxyRequest.getRequestLine().getMethod();
+    twoPrint("请求URL: "+realRequestURL);
+    
     // twoPrint(proxyRequest.getRequestLine().getUri());
-    twoPrint("请求方法: "+requestMethod);
     if("GET".equals(requestMethod)){
       
     }else{
-      twoPrint("请求 body:"+parJson);
+      twoPrint("请求body:"+parJson);
       requestBody =parJson;
     }
     HttpParams params = proxyRequest.getParams();
@@ -890,7 +898,35 @@ Accept,application/json, text/plain, *\/*
     }
   }
 
-  private String readConfig(String name){
+  private Map readAllLine(String name){
+    String A ="/Users/zenghuikang/Downloads/0a_cookie_and_token";
+    File file = new File(A);
+    String maxStr = A+"/"+name+".json";
+    //open the file
+    FileReader file1 = null;
+    try {
+      file1 = new FileReader(maxStr);
+    } catch (FileNotFoundException e) {
+      e.printStackTrace();
+    }
+    Map<String,String> tokenMap = new HashMap();
+    try (BufferedReader buffer = new BufferedReader(file1))
+        {
+            String line;
+            while ((line = buffer.readLine()) != null) {
+                //System.out.println(line);
+                String[] arr = line.split(":");
+                if(arr != null && arr.length == 2){
+                  tokenMap.put(arr[0], arr[1]);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    return tokenMap;
+  }
+
+  /* private String readConfig(String name){
     String A ="/Users/zenghuikang/Downloads/0a_cookie_and_token";
     File file = new File(A);
     String maxStr = A+"/"+name+".json";
@@ -912,7 +948,7 @@ Accept,application/json, text/plain, *\/*
     //display the 1st line
     //System.out.println(line);
     return line;
-  }
+  } */
 
   private String headerGoogle2(String name){
       String A ="/Users/zenghuikang/Downloads/cookie_and_token";
