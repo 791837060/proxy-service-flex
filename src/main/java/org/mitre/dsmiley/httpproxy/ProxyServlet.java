@@ -807,57 +807,6 @@ public class ProxyServlet extends HttpServlet {
     proxyRequest.setHeader("x-cf-token", split[0]);
     proxyRequest.setHeader("cookie", split[1]);*/
 
-
-    /*curl --location --request POST 'https://v2ppapi.coinflex.com/v2/account/protected/bitcoin/flexaaset/submit' \
---header 'authority: api-durian.cfdev.pro' \
---header 'pragma: no-cache' \
---header 'cache-control: no-cache' \
---header 'sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"' \
---header 'accept: application/json, text/plain, *\/*' \
- --header 'x-cf-token: eyJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiIxMDEyOSIsImxvZ2luSWQiOiI2MzUzNTgyNCIsImlhdCI6MTY0OTc1NzQ0MSwiZXhwIjoxNjQ5ODAwNjQxfQ.VSD2NlhzZc-KG_eaNxgTVbg_bJGQGcB5gWgUzSssajs' \
-    --header 'sec-ch-ua-mobile: ?0' \
-    --header 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.109 Safari/537.36' \
-    --header 'sec-ch-ua-platform: "macOS"' \
-    --header 'origin: https://durian.cfdev.pro' \
-    --header 'sec-fetch-site: same-site' \
-    --header 'sec-fetch-mode: cors' \
-    --header 'sec-fetch-dest: empty' \
-    --header 'referer: https://durian.cfdev.pro/' \
-    --header 'accept-language: zh-CN,zh;q=0.9' \
-    --header 'cookie: _fbp=fb.1.1641436032934.768581463; _ga=GA1.2.542383814.1644460300; csrftoken=1780f9d695d1476fb46744938f9a7013; csrftoken=290c252a344e4c0f8c08b2ff1fdcbfa9' \
-    --header 'Content-Type: application/json' \
-    --data-raw '{
-    "publicAddress": "0x10f2ad1ca237b07351abc5e936cac84023958c1e",
-                             "withdrawAddressList":[{"withdrawAddress":"slptest:qqtjehmrg2dztlhkv67yu4ljcxrvyztptvkpc6x49f","instrumentId":"flexUSD","network":"SLP"}],
-    "flexassetSubmitParam":{
-      "quantity":"100","action":"CREATE","productId":"729621162190995458"
-    },
-    "txIdOne":"0x9d9d9052d5709b5eed948e1e7756d9b898b4e5fb4f2f0357f58fa0c0d42e9ffa",
-                      "depositParmList":[{"depositCoin":"USD","depositNetwork":"ERC20","depositAddress":"0x9eD37be16620ECA8e581aff1336A459aAcD717bD"}]
-  }'*/
-
-    /*Origin,https://durian.cfdev.pro
-sec-fetch-mode,cors
-Cookie,
-x-cf-token,eyJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiIxMDEyOSIsImxvZ2luSWQiOiI2MzUzNTgyNCIsImlhdCI6MTY0OTc1NzQ0MSwiZXhwIjoxNjQ5ODAwNjQxfQ.VSD2NlhzZc-KG_eaNxgTVbg_bJGQGcB5gWgUzSssajs
-sec-fetch-site,same-site
-Accept,application/json, text/plain, *\/*
-    User-Agent,Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.109 Safari/537.36
-    Referer,https://durian.cfdev.pro/
-    Host,v2ppapi.coinflex.com
-    Pragma,no-cache
-    Accept-Encoding,gzip, deflate, br
-    sec-ch-ua," Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"
-    sec-ch-ua-mobile,?0
-    Cache-Control,no-cache
-    authority,api-durian.cfdev.pro
-    sec-ch-ua-platform,"macOS"
-    Postman-Token,437b5746-083e-46be-be2e-8f173384b787
-    Accept-Language,zh-CN,zh;q=0.9
-    sec-fetch-dest,empty
-    Content-Type,application/json*/
-
-
     SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
     
     twoPrint("_________________start___________________________start___________________________start___________________________start___________________________start__________");
