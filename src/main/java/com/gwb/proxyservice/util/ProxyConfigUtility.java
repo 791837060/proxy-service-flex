@@ -32,37 +32,6 @@ public final class ProxyConfigUtility {
 	private static final String ELEMENT_PROXYURL = "proxyUrl";
 	private static final String ELEMENT_TARGETURL = "targetUrl";
 
-	//String targetUrl = "https://gridcloud.91cpct.com/stage-api";
-
-
-	// 包含ulhttp则无效  如 ulhttps://webapp.91cpct.com
-
-	//没有用的字段  uselessfield
-
-	//cookie:
-	///public static String x_cf_token_cookie = "eyJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50SWQiOiIxMDEyOSIsImxvZ2luSWQiOiI2MzUzNTgyNCIsImlhdCI6MTY1MDAwNDAxMiwiZXhwIjoxNjUwMDQ3MjEyfQ.e45WXgfL3sFJzc0i-2PGRYJNmaSkuNKqepjKDd82gnkcookie: hubspotutk=b1f66c24224a91e1e3cfe3ac5dc99f01; __hs_opt_out=no; _fbp=fb.1.1636106597800.1519054498; _ga=GA1.2.286209416.1639123413; __cf_bm=VBGDZFM.XpYp4hJGrt97d4bFaCwsoaWpLu7B4BOXF9Q-1650003984-0-AVZj7/+H6RhxbBYZ5RSO8M3uJ5mw7wsIexBPxEDkzU7HlSx4Zu6I0QlP58uqnbgpoYOQwD5ocrkO0xEAhp5uMxEIsfbQ6hEu1JiR3nsATNwfCAS7aGkcGzmGA71w/CUJAg==; __hstc=30769248.b1f66c24224a91e1e3cfe3ac5dc99f01.1636106544441.1649929094667.1650003985557.91; __hssrc=1; __hssc=30769248.1.1650003985557; csrftoken=4a23ca59f63a4a4d88c38810d5fa3ab8";
-
-
-
-
-
-
-
-
-//public static String targetUrlLocal = "http://192.168.0.100:8403";
-
-	/*
-
-
-	 redis-cli -h 127.0.0.1 -p 6379 -a Credit2016Admin set targetUrlTest http://192.168.0.100:8403
-	 redis-cli -h 127.0.0.1 -p 6379 -a Credit2016Admin set appLogin http://192.168.0.100:8403/app-token/api/authenticate
-
-
-	 redis-cli -h 127.0.0.1 -p 6379 -a Credit2016Admin set targetUrlTest https://webapp.91cpct.com
-	 redis-cli -h 127.0.0.1 -p 6379 -a Credit2016Admin set appLogin https://webapp.91cpct.com/app-token/api/authenticate
-
-*/
-
 
 	public static ShardedJedisPool pool;
 	static {

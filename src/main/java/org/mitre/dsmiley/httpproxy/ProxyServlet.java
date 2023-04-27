@@ -447,10 +447,25 @@ public class ProxyServlet extends HttpServlet {
     String cookie1 = "'cookie: "+cookie+"'";
     String authorization1 = "'authorization: "+authorization+"'";
     String requestBody1 = "'"+requestBody+"'";
-    String curl2 = "curl "+realRequestURL1+" \\\n" + "  -H 'pragma: no-cache' \\\n" + "  -H 'cache-control: no-cache' \\\n" + "  -H 'sec-ch-ua: \" Not A;Brand\";v=\"99\", \"Chromium\";v=\"99\", \"Google Chrome\";v=\"99\"' \\\n" + "  -H 'accept: application/json, text/plain, */*' \\\n" + "  -H 'sec-ch-ua-mobile: ?0' \\\n" + "  -H 'content-type: application/json;charset=UTF-8' \\\n" + "  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.83 Safari/537.36' \\\n" + "  -H 'sec-ch-ua-platform: \"macOS\"' \\\n" + "  -H 'sec-fetch-site: same-site' \\\n" + "  -H 'sec-fetch-mode: cors' \\\n" + "  -H 'sec-fetch-dest: empty' \\\n" + "  -H 'accept-language: zh-CN,zh;q=0.9' \\\n" 
-    + "  -H  "+cookie1+" \\\n" 
-    + "  -H  "+token1+" \\\n" 
-    + "  -H  "+authorization1+" \\\n";
+    String curl2 = "curl "+realRequestURL1+" \\\n" 
+    //+ "  -H 'pragma: no-cache' \\\n" 
+    //+ "  -H 'cache-control: no-cache' \\\n" 
+    //+ "  -H 'sec-ch-ua: \" Not A;Brand\";v=\"99\", \"Chromium\";v=\"99\", \"Google Chrome\";v=\"99\"' \\\n" 
+    //+ "  -H 'accept: application/json, text/plain, */*' \\\n" 
+    //+ "  -H 'sec-ch-ua-mobile: ?0' \\\n" 
+    + "  -H 'content-type: application/json;charset=UTF-8' \\\n" 
+    //+ "  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.83 Safari/537.36' \\\n" 
+    //+ "  -H 'sec-ch-ua-platform: \"macOS\"' \\\n" 
+    //+ "  -H 'sec-fetch-site: same-site' \\\n" 
+    //+ "  -H 'sec-fetch-mode: cors' \\\n" 
+    //+ "  -H 'sec-fetch-dest: empty' \\\n" 
+    //+ "  -H 'accept-language: zh-CN,zh;q=0.9' \\\n" 
+    
+    //+ "  -H  "+cookie1+" \\\n" 
+    //+ "  -H  "+token1+" \\\n" 
+    //+ "  -H  "+authorization1+" \\\n";
+
+    + "";
     if(!requestMethod.equals("GET")){
       curl2 = curl2 + "  --data-raw "+requestBody1+" \\\n";
     }
@@ -689,33 +704,15 @@ public class ProxyServlet extends HttpServlet {
     String authorizationFile = "authorization";
 
     if(requestUR.contains("/local_")){
-      tokenFile = "durian_"+tokenFile+"_durian";
-      cookieFile = "durian_"+cookieFile+"_durian";
-      authorizationFile = "durian_"+authorizationFile+"_durian";
+      tokenFile = "local_"+tokenFile+"_local";
+      cookieFile = "local_"+cookieFile+"_local";
+      authorizationFile = "local_"+authorizationFile+"_local";
     }
 
     if(requestUR.contains("/durian/")){
       tokenFile = "durian_"+tokenFile+"_durian";
       cookieFile = "durian_"+cookieFile+"_durian";
       authorizationFile = "durian_"+authorizationFile+"_durian";
-    }
-
-    if(requestUR.contains("/ignite_durian/")){
-      tokenFile = "durian_"+tokenFile+"_durian";
-      cookieFile = "durian_"+cookieFile+"_durian";
-      authorizationFile = "durian_"+authorizationFile+"_durian";
-    }
-
-    if(requestUR.contains("/ignite_lemon/")){
-      tokenFile = "lemon_"+tokenFile+"_lemon";
-      cookieFile = "lemon_"+cookieFile+"_lemon";
-      authorizationFile = "lemon_"+authorizationFile+"_lemon";
-    }
-
-    if(requestUR.contains("/ignite_stage/")){
-      tokenFile = "stg_"+tokenFile+"_stg";
-      cookieFile = "stg_"+cookieFile+"_stg";
-      authorizationFile = "stg_"+authorizationFile+"_stg";
     }
 
     if(requestUR.contains("/stg/")){
@@ -734,6 +731,24 @@ public class ProxyServlet extends HttpServlet {
       tokenFile = "kiwi_"+tokenFile+"_kiwi";
       cookieFile = "kiwi_"+cookieFile+"_kiwi";
       authorizationFile = "kiwi_"+authorizationFile+"_kiwi";
+    }
+
+    if(requestUR.contains("/ignite_durian/")){
+      tokenFile = "durian_"+tokenFile+"_durian";
+      cookieFile = "durian_"+cookieFile+"_durian";
+      authorizationFile = "durian_"+authorizationFile+"_durian";
+    }
+
+    if(requestUR.contains("/ignite_lemon/")){
+      tokenFile = "lemon_"+tokenFile+"_lemon";
+      cookieFile = "lemon_"+cookieFile+"_lemon";
+      authorizationFile = "lemon_"+authorizationFile+"_lemon";
+    }
+
+    if(requestUR.contains("/ignite_stage/")){
+      tokenFile = "stg_"+tokenFile+"_stg";
+      cookieFile = "stg_"+cookieFile+"_stg";
+      authorizationFile = "stg_"+authorizationFile+"_stg";
     }
 
     if(requestUR.contains("/time/out")){
@@ -790,17 +805,25 @@ public class ProxyServlet extends HttpServlet {
     proxyRequest.setHeader("x-cf-token", token);
     proxyRequest.setHeader("cookie", cookie);
 
-    if(requestUR.contains("/admin/")){
+    
+    if(!requestUR.contains("/local_")&&requestUR.contains("/admin/")){
+      System.out.println("1,authorization:"+authorization);
       proxyRequest.setHeader("authorization", authorization);
     }
+
+    if(requestUR.contains("/local_")){
+      System.out.println("1,local不要authorization:"+authorization);
+      proxyRequest.removeHeaders("authorization");
+    }
+    
    
 
-    System.out.println("cookie: "+cookie);
-    System.out.println("x-cf-token: "+token);
+    System.out.println("2,cookie: "+cookie);
+    System.out.println("3,x-cf-token: "+token);
     requestURL = servletRequest.getRequestURL().toString();
 
     System.out.println("");
-    System.out.println("var token = '"+token+"';\n" + "var ck = '"+cookie+"';\n" + "\n" + "// 添加或修改已存在 header\n" + "pm.request.headers.upsert({\n" + "    key: 'cookie',\n" + "    value: ck\n" + "});\n" + "\n" + "pm.request.headers.upsert({\n" + "    key: 'x-cf-token',\n" + "    value: token\n" + "});");
+    System.out.println("4,var token = '"+token+"';\n" + "5,var ck = '"+cookie+"';\n" + "\n" + "// 添加或修改已存在 header\n" + "pm.request.headers.upsert({\n" + "    key: 'cookie',\n" + "    value: ck\n" + "});\n" + "\n" + "pm.request.headers.upsert({\n" + "    key: 'x-cf-token',\n" + "    value: token\n" + "});");
     System.out.println("");
     //写死认证参数
     /*String[] split = ProxyConfigUtility.x_cf_token_cookie.split("cookie: ");
@@ -1042,8 +1065,6 @@ List<String> fileListData =  new ArrayList();
 
 
       JSONObject jsonParam = JSON.parseObject(JSON.toJSONString(loginDto));
-      //String url ="https://webapp.91cpct.com/app-token/api/authenticate";
-
 
       String url = targetUrl+"/app-token/api/authenticate";
       // post请求返回结果
