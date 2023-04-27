@@ -6,65 +6,7 @@
 	</defaultSettings>
 
 	<ProxyServices>
-		<!--<ProxyService>
-			<proxyUrl>/*</proxyUrl>
-			<targetUrl>https://v2ppapi.coinflex.com</targetUrl>
-		</ProxyService>-->
-
-		<ProxyService>
-			<proxyUrl>/pp/*</proxyUrl>
-			<targetUrl>https://v2ppapi.coinflex.com</targetUrl>
-		</ProxyService>
-
-		<ProxyService>
-			<proxyUrl>/stg/*</proxyUrl>
-			<targetUrl>https://v2stgapi.coinflex.com</targetUrl>
-		</ProxyService>
-
-		<ProxyService>
-			<proxyUrl>/durian/*</proxyUrl>
-			<targetUrl>https://api-durian.cfdev.pro</targetUrl>
-		</ProxyService>
-
-		<ProxyService>
-			<proxyUrl>/ignite_durian/*</proxyUrl>
-			<targetUrl>http://172.21.11.84:30298</targetUrl>
-		</ProxyService>
-
-		<ProxyService>
-			<proxyUrl>/ignite_durian_proxy/*</proxyUrl>
-			<targetUrl>http://172.21.31.3:9993</targetUrl>
-		</ProxyService>
-
-		<ProxyService>
-			<proxyUrl>/ignite_lemon/*</proxyUrl>
-			<targetUrl>http://172.21.31.3:9991</targetUrl>  <!-- 这个是代理 -->
-		</ProxyService>
-
-		<ProxyService>
-			<proxyUrl>/ignite_kiwi/*</proxyUrl>
-			<targetUrl>http://172.21.31.3:9992</targetUrl>  <!-- 这个是代理 -->
-		</ProxyService>
-
-		<ProxyService>
-			<proxyUrl>/ignite_lemon1/*</proxyUrl>
-			<targetUrl>http://172.21.11.86:9988</targetUrl>
-		</ProxyService>
-
-		<ProxyService>
-			<proxyUrl>/ignite_stage/*</proxyUrl>
-			<targetUrl>http://172.43.13.59:9988</targetUrl>
-		</ProxyService>
-
-		<ProxyService>
-			<proxyUrl>/lemon/*</proxyUrl>
-			<targetUrl>https://api-lemon.cfdev.pro</targetUrl>
-		</ProxyService>
-
-		<ProxyService>
-			<proxyUrl>/kiwi/*</proxyUrl>
-			<targetUrl>https://api-kiwi.cfdev.pro</targetUrl>
-		</ProxyService>
+		
 
 		<ProxyService>
 			<proxyUrl>/local_amm/*</proxyUrl>
